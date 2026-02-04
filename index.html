@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Anniversary ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 420px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      animation: fadeIn 1.2s ease;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      font-size: 2.3em;
+    }
+
+    .date {
+      opacity: 0.9;
+      margin-bottom: 25px;
+    }
+
+    button {
+      background: white;
+      color: #ff5f8f;
+      border: none;
+      padding: 14px 28px;
+      font-size: 1em;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      background: #ffe6ee;
+    }
+
+    .secret {
+      margin-top: 25px;
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 1.2s ease;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    .secret.show {
+      opacity: 1;
+      max-height: 300px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Happy Anniversary ❤️</h1>
+    <div class="date">1 year, 9 month,5 days  , forever to go ✨</div>
+
+    <button onclick="revealSecret()">Open My Secret 💌</button>
+
+    <div id="secretMessage" class="secret">
+      I don’t how much enough i am for you , but you mean everything to me.  
+      <br><br>
+      You are my calmness in my chaotic days , you are my smile on bad days,  
+      and the reason I believe in forever.
+        
+      <br><br>
+      I do choose you. Always. ❤️
+    </div>
+  </div>
+
+  <script>
+    function revealSecret() {
+      document.getElementById("secretMessage").classList.add("show");
+    }
+  </script>
+
+</body>
+</html>
+
